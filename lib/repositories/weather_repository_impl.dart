@@ -1,10 +1,15 @@
 import 'dart:convert';
 
-import 'package:flutter/cupertino.dart';
-import 'package:flutterblocpattern/weather/data/models/weather_model.dart';
-import 'package:flutterblocpattern/weather/domain/repositories/weather_repository.dart';
-
+import 'package:flutterblocpattern/models/weather_model.dart';
 import 'package:http/http.dart' as http;
+
+abstract class WeatherRepository {
+  Future<int> getLocationId(String city);
+
+  Future<WeatherModel> fetchWeather(int locationId);
+
+  Future<WeatherModel> getWeather(String city);
+}
 
 class WeatherRepositoryImpl extends WeatherRepository {
   static const baseUrl = 'https://www.metaweather.com';
@@ -19,7 +24,7 @@ class WeatherRepositoryImpl extends WeatherRepository {
     }
 
     final weatherJson = jsonDecode(weatherResponse.body);
-    WeatherModel _weatherModel  = WeatherModel.fromJson(weatherJson);
+    WeatherModel _weatherModel = WeatherModel.fromJson(weatherJson);
     return _weatherModel;
   }
 

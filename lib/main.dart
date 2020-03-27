@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutterblocpattern/weather/data/repositories/weather_repository_impl.dart';
-import 'package:flutterblocpattern/weather/presentation/manager/weather_bloc.dart';
-import 'weather/presentation/pages/weather_page.dart';
+import 'package:flutterblocpattern/blocs/weather/weather_bloc.dart';
+import 'package:flutterblocpattern/repositories/weather_repository_impl.dart';
+
+import 'ui/pages/weather_page.dart';
 
 void main() => runApp(MyApp());
 

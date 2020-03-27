@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutterblocpattern/weather/data/repositories/weather_repository_impl.dart';
-import 'package:flutterblocpattern/weather/data/models/weather_model.dart';
-import 'package:flutterblocpattern/weather/presentation/manager/weather_event.dart';
-import 'package:flutterblocpattern/weather/presentation/manager/weather_state.dart';
+import 'package:flutterblocpattern/blocs/weather/weather_event.dart';
+import 'package:flutterblocpattern/blocs/weather/weather_state.dart';
+import 'package:flutterblocpattern/models/weather_model.dart';
+import 'package:flutterblocpattern/repositories/weather_repository_impl.dart';
 
 class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
   final WeatherRepositoryImpl weatherRepositoryImpl;

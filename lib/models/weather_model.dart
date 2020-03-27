@@ -39,16 +39,16 @@ class WeatherModel extends Equatable {
 
   @override
   List<Object> get props => [
-    condition,
-    formattedCondition,
-    minTemp,
-    temp,
-    maxTemp,
-    locationId,
-    created,
-    lastUpdated,
-    location,
-  ];
+        condition,
+        formattedCondition,
+        minTemp,
+        temp,
+        maxTemp,
+        locationId,
+        created,
+        lastUpdated,
+        location,
+      ];
 
   static WeatherModel fromJson(dynamic json) {
     final consolidatedWeather = json['consolidated_weather'][0];

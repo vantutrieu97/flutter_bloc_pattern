@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterblocpattern/weather/data/models/weather_model.dart';
+import 'package:flutterblocpattern/models/weather_model.dart';
 
 class WeatherConditions extends StatelessWidget {
   final WeatherCondition condition;
@@ -42,8 +42,8 @@ class WeatherConditions extends StatelessWidget {
         break;
     }
     return Container(
-      width: _screenWith/6,
-      height: _screenWith/6,
+      width: _screenWith / 6,
+      height: _screenWith / 6,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(imageURI),

@@ -1,12 +1,9 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutterblocpattern/weather/presentation/manager/weather_bloc.dart';
-import 'package:flutterblocpattern/weather/presentation/manager/weather_event.dart';
-import 'package:flutterblocpattern/weather/presentation/manager/weather_state.dart';
-import 'package:flutterblocpattern/weather/presentation/widgets/weather_conditions.dart';
+import 'package:flutterblocpattern/blocs/weather/weather_bloc.dart';
+import 'package:flutterblocpattern/blocs/weather/weather_event.dart';
+import 'package:flutterblocpattern/blocs/weather/weather_state.dart';
+import 'package:flutterblocpattern/ui/widgets/weather_conditions.dart';
 
 class WeatherPage extends StatefulWidget {
   @override
@@ -55,8 +52,7 @@ class _WeatherPageState extends State<WeatherPage> {
                       ],
                     ),
                   );
-                }
-                else if (state is WeatherLoaded) {
+                } else if (state is WeatherLoaded) {
                   return Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -125,8 +121,7 @@ class _WeatherPageState extends State<WeatherPage> {
                       SeacrLocationWidget(),
                     ],
                   );
-                }
-                else if (state is WeatherError) {
+                } else if (state is WeatherError) {
                   return Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
