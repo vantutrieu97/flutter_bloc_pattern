@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutterblocpattern/counter_event.dart';
-enum CounterEvent { increment, decrement }
+
+import 'counter_bloc.dart';
 
 class CounterBloc extends Bloc<CounterEvent, int> {
   @override
